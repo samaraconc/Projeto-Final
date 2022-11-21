@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "lista")
+@Table (name = "tarefa")
 
 public class Tarefa {
 	
@@ -24,6 +24,7 @@ public class Tarefa {
 	
 	
 	//Getters e Stters - obtenção de dados 
+	
 	public Long getId() {
 		return id;
 	}
@@ -39,7 +40,7 @@ public class Tarefa {
 	public String getCategoria() {
 		return categoria;
 	}
-	public void setTarefa(String categoria) {
+	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	public String getData() {
@@ -48,5 +49,8 @@ public class Tarefa {
 	public void setData(String data) {
 		this.data = data;
 	}
+	
+	
+	
 	
 }

@@ -2,6 +2,7 @@ package br.edu.ifgoiano.servico;
 
 import java.util.List;
 import br.edu.ifgoiano.entidade.Tarefa;
+
 public interface TarefaService {
 
 	public List<Tarefa> listarTarefas();

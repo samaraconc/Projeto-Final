@@ -1,0 +1,53 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ava-List</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Lista de Tarefas</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-Lg3">
+				<a th:href=@{/tarefa/nova} class="btn btn-primary">Incluir</a>
+			</div>
+		</div>
+		<div class="row">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Disciplina <th>
+						<th scope="col">Categoria</th>
+						<th scope="col">Data de entrega</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-th-each="Trf: ${tarefas}">
+						<td data-th-text="${Trf.id}"></td>
+						<td data-th-text="${Trf.disciplina}"></td>
+						<td data-th-text="${Trf.categoria}"></td>
+						<td data-th-text="${Trf.data}"></td>
+						<td>
+							<a class="btn btn-success" th:href= "@{/tarefas/alterar/{id}(id=${Trf.id})}" >Alterar</a>
+							<a class= "btn btn-danger" th:href= "@{/tarefas/excluir/{id}(id=${Trf.id})}">Excluir</a>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+		crossorigin="anonymous"></script>
+</body>
+</html>
