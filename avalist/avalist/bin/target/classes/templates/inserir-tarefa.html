@@ -27,18 +27,39 @@
 			th:object="${tarefa}">
 			<div class="mb-3">
 				<label for="txtDisciplina" class="form-label">Disciplina:</label> <input
-					type="text" class="form-control" id="txtDisciplina" th:field="*{disciplina}">
+					type="text" class="form-control" id="txtDisciplina" th:field="*{disciplina}" required>
 			</div>
 
 			<div class="mb-3">
 				<label for="txtCategoria" class="form-label">Categoria:</label> <input
-					type="text" class="form-control" id="txtCategoria" th:field="*{categoria}">
+					type="text" class="form-control" id="txtCategoria" th:field="*{categoria}" required>
 			</div>
 
 			<div class="mb-3">
 				<label for="txtData" class="form-label">Data de entrega:</label> <input
-					type="text" class="form-control" id="txtData" th:field="*{data}">
+					type="text" class="form-control" id="txtData" th:field="*{data}"required>
 			</div>
+			
+			<div>
+				<p> Prioridade 
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+				<label class="form-check-label" for="inlineRadio1">Baixa</label>
+				
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+				<label class="form-check-label" for="inlineRadio2">Média</label>
+				
+			</div>
+			
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+				<label class="form-check-label" for="inlineRadio3">Alta</label>
+				
+			</div>
+			
 
 			<button type="submit" class="btn btn-primary">Salvar</button>
 		</form>
